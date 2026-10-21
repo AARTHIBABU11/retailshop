@@ -29,7 +29,7 @@ public class AuthService {
 
 
 
-        if(loginRepository.findByUsername(username)){
+        if(!loginRepository.findByUsername(username)){
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST,
                     "User not found "
